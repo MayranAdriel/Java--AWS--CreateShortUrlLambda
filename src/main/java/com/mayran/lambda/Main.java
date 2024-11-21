@@ -51,7 +51,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
             s3Client.putObject(request, RequestBody.fromString(urlDataJson));
         }
         catch (Exception e) {
-            throw new RuntimeException("Erro ao salvar objeto no S3" + e);
+            throw new RuntimeException("Erro ao salvar objeto no S3" + e.getMessage() + e);
         }
 
 
